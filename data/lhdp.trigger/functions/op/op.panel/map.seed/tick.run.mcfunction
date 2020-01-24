@@ -1,0 +1,8 @@
+#Lucky_He
+#/data/lhdp.trigger/functions/op/op.panel/map.seed/tick.run.mcfunction
+
+execute as @a if score @s opPanel = $393216$ c.int run tellraw @s {"text":"", "color":"gold", "extra":[{"text":"/trigger opPanel set 0x60000", "color":"red"}, "    ", {"text":"关于地图种子", "color":"red", "hoverEvent":{"action":"show_text", "value":{"text":"Map seed", "color":"red"}}}, "\n"]}
+
+execute as @a if score @s opPanel = $393216$ c.int run tellraw @s {"text":"", "color":"gold", "extra":["    ", {"text":"在记分板storedSeed中，有4个记分项目：", "hoverEvent":{"action":"show_text", "value":{"text":"In scoreboard \"storedSeed\", there're 4 \"players\":", "color":"gold"}}}, "\n", "    ", {"text":"$$seedA$$", "color":"red"}, " ", {"text":"$$seedB$$", "color":"red"}, " ", {"text":"$$seedC$$", "color":"red"}, " ", {"text":"$$seedD$$", "color":"red"}, ", ", "\n", "    ", {"text":"最终的显示结果是4个记分项目直接连接起来。", "hoverEvent":{"action":"show_text", "value":{"text":"and the final seed displayed to players is the connection of their values.", "color":"gold"}}}, "\n", "    ", {"text":"所以，你只需要使用指令/scoreboard players set $$seedX$$ storedSeed <分数>调整对应的分数即可。", "hoverEvent":{"action":"show_text", "value":{"text":"So, here you just need to modify their scores by using command \"/scoreboard players set $$seedX$$ storedSeed <value>\".", "color":"gold"}}}, "\n", "    ", {"text":"如需重置分数，请使用/scoreboard players reset $$seedX$$ storedSeed。", "hoverEvent":{"action":"show_text", "value":{"text":"If you wanna reset their values, use command \"/scoreboard players reset $$seedX$$ storedSeed\"", "color":"gold"}}}]}
+
+#Lucky_He
